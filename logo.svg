@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 287.33 84.91">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: #515daa;
+        font-family: RetiroStd-Regular24pt, 'Retiro Std';
+        font-size: 91.51px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(-1.46 70.16)"><tspan class="cls-1" x="0" y="0">R</tspan><tspan x="56.1" y="0">O</tspan><tspan class="cls-2" x="116.22" y="0">U</tspan><tspan x="178.91" y="0">GE</tspan></text>
+</svg>
