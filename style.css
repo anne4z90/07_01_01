@@ -31,11 +31,20 @@ li{
 
 /******* Product List ******/
 
+@media (min-width: 850px){
 .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 4rem;
 }
+}
+@media (max-width: 850px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 4rem;
+    }
+    }
 article{
     display: flex;
     flex-direction: column;
@@ -88,9 +97,4 @@ h3, p{
 .img{
     width: 50%;
 }
-main{
-        display: flex;
-        flex-direction: column;
-      }
-
 
