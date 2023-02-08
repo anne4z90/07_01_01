@@ -33,11 +33,20 @@ li{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
     gap: 2rem;
-    margin: 6rem;
+    margin: 7rem;
+    column-gap: 6rem;
 }
-article .productList{
+ .productList article{
     display: flex;
     flex-direction: column;
+}
+.productList article.soldOut::before {
+    content: "SOLD OUT";
+    font-family: 'News Cycle', sans-serif;
+    position: absolute;
+    background: var(--color);
+    color: var(--background-color);
+    padding: 1rem;
 }
 
 .soldOut{
@@ -55,9 +64,8 @@ h2{
 h3, p{
     font-family: 'News Cycle', sans-serif;
 }
-
 p{
-    line-height: 15px;
+    line-height: 7px;
 }
 
 .link{
@@ -102,6 +110,19 @@ p{
    margin-bottom: 2.5rem;
    text-align: center;
 }
-
+:root{
+    --color: #272727;
+--background-color: white;
+--caret-color: #272727;
+--text-decoration-color: #c0bfc0;
+--text-decoration-color-hover: #272727;
+--input-border-color: #f6f6f6;
+--input-background-color: #f6f6f6;
+--input-color: #343334;
+--input-invalid-border-color: #ff7d87;
+--input-checkbox-border-color: #d8d8d8;
+--table-border-color: #d8d8d8;
+--table-header-color: #d8d8d8;
+}
 
 
