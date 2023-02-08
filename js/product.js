@@ -1,56 +1,49 @@
-/* https://kea-alt-del.dk/t7/api/products/1165 */
-//Vis forskellige produkter
+// https://kea-alt-del.dk/t7/api/products/1525
 
-fetch("https://kea-alt-del.dk/t7/api/products/1165")
-.then((response) => response.json())
-.then((data) => showProduct(data)); 
+// kalder på databasen og viser produkter
 
-function showProduct(product){
-  console.log(product);
-  document.querySelector(".purchaseBox h3").textContent = product.productdisplayname;
-  document.querySelector(".purchaseBox .price").textContent = product.price;
-  document.querySelector(".img").src=`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-
-}
-
-// https://kea-alt-del.dk/t7/api/products/1565
-
-const urlParams = new URLSearchParams(window.location.search);
-const id = url.Params.get("id");
-
-fetch("https://kea-alt-del.dk/t7/api/products/" + id)
+fetch("https://kea-alt-del.dk/t7/api/products/1525")
 .then((response) => response.json())
 .then((data) => showProduct(data));
 
+// ændrer fx navn, pris og billede
+function showProduct(product){
+  console.log(product);
+  document.querySelector(".purchaseBox h3").textContent=
+  product.productdisplayname;
+  document.querySelector(".purchaseBox .brand").textContent=
+  product.brandname;
+  document.querySelector(".img").src=`https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`
+  document.querySelector(".purchaseBox .price").textContent=
+  product.price;
+}
+
 /*
-{
-  "id": 1165,
-  "gender": "Men",
-  "category": "Apparel",
-  "subcategory": "Topwear",
-  "articletype": "Tshirts",
-  "basecolour": "Blue",
-  "season": "Summer",
-  "productionyear": 2013,
-  "usagetype": "Sports",
-  "productdisplayname": "Mean Team India Cricket Jersey",
+  "id": 1525,
+  "gender": "Unisex",
+  "category": "Accessories",
+  "subcategory": "Bags",
+  "articletype": "Backpacks",
+  "basecolour": "Navy Blue",
+  "season": "Fall",
+  "productionyear": 2010,
+  "usagetype": "Casual",
+  "productdisplayname": "Deck Navy Blue Backpack",
   "parsed": 1,
   "soldout": 0,
-  "relid": 1165,
-  "price": 2495,
-  "discount": 45,
-  "variantname": "Authentic Jersey",
-  "brandname": "Nike",
-  "brandbio": "Nike, creating experiences for today’s athlete",
-  "brandimage": "http://assets.myntassets.com/v1/assets/banners/2015/6/26/1435317851398-23197-3chxv6.jpg",
-  "agegroup": "Adults-Men",
+  "relid": 1525,
+  "price": 1299,
+  "discount": 55,
+  "variantname": "Deck Backpack",
+  "brandname": "Puma",
+  "brandbio": "PUMA is the World's Fastest Sports Brand",
+  "brandimage": "http://assets.myntassets.com/assets/images/2015/11/17/11447736932686-113016-3ff8sf.jpg",
+  "agegroup": "Adults-Unisex",
   "colour1": "NA",
   "colour2": "NA",
   "fashiontype": "Fashion",
-  "materialcaredesc": "<p>Polyester<br />Machine wash</p>",
+  "materialcaredesc": null,
   "sizefitdesc": null,
-  "description": "<p>Blue jersey with a tipped collar, concealed, half buttoned placket, Nike print on the right chest, Team India print and applique on the front, short sleeves, tri-colour side panels, print at the back</p>",
-  "styledesc": "<p>Root for our country in style with this team India jersey from Nike. The Dri-fit fabric and panel"
-}
-
-*/ 
+  "description": "<p>asfafaf<br> kasjhdkashd</p>",
+  "styledesc": null
+*/

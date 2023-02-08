@@ -4,12 +4,10 @@
     padding: 3rem;
 }
 img{
-    width: 100%;
-        display: block;
-        align-self: stretch;
-        padding: 10px;
-        object-fit: cover;
-      }
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 /**** Categories ****/
 h1{
     margin-left: 6rem;
@@ -31,26 +29,18 @@ li{
 
 /******* Product List ******/
 
-@media (min-width: 850px){
-.container{
+.productList main{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    gap: 2rem;
+    margin: 6rem;
 }
-}
-@media (max-width: 850px){
-    .container{
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 4rem;
-    }
-    }
-article{
+article .productList{
     display: flex;
     flex-direction: column;
 }
 
-.product_soldout, .product_onsale_soldout{
+.soldOut{
     opacity: 0.5;
 }
 
@@ -63,12 +53,14 @@ h2{
 }
 
 h3, p{
-    font-family: 'Playfair Display', serif;
-    line-height: 0.5px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+p{
+    line-height: 15px;
 }
 
 .link{
-    font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 3rem;
     font-size: 18px;
@@ -76,7 +68,7 @@ h3, p{
 }
 
 .product{
-    font-family: 'Playfair Display', serif;
+    font-family: 'News Cycle', sans-serif;
     line-height: 0.5px;
     font-size: 14px;
     color: black;
@@ -85,16 +77,31 @@ h3, p{
     color: black;
 }
 
+.read-more{
+    font-size: 15px;
+    background-color: aliceblue;
+    padding: 10px;
+    font-family: 'News Cycle', sans-serif;
+    
+}
+
 /**** Product ******/
 
-.container2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.des{
+.purchaseBox{
+    background-color: aliceblue;
+    padding: 2rem;
+    width: 50%;
     grid-column: 2;
 }
-.img{
-    width: 50%;
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1000px));
 }
+
+.name{
+   margin-bottom: 2.5rem;
+   text-align: center;
+}
+
+
 
