@@ -10,6 +10,7 @@ function showProducts(products){
 }
 
 function showProduct(product){
+    console.log(product);
     // fang template
 const template = document.querySelector("#smallProductTemplate").content;
     // lav kopi
@@ -23,9 +24,8 @@ if(product.soldout){
     //produktet er udsolgt
     copy.querySelector("article").classList.add("soldOut");
 }
-
+copy.querySelector(".read-more").setAttribute("href", `product.html?id=${product.id}`);  
     //append
-
     document.querySelector("main").appendChild(copy);
 
 }
